@@ -1,0 +1,40 @@
+class RevRot {
+    
+    public static String revRot(String strng, int sz) {
+      // If sz is unsuitable size or strng is empty
+        if (sz > strng.length() || sz <= 0 || strng.equals(" ")) {
+          return "";
+        }
+      else {
+        // String 1 is index from 0 to sz
+        String sub1 = strng.substring(0, sz);
+        // String 2 is index sz+1 to sz+sz
+        String sub2 = strng.substring(sz+1, sz+sz);
+        
+        // If remainder of string is less than sz, set string 3 to rest of string
+        if (strng.substring(sz+sz+1, sz+sz+sz).length() < sz) {
+          String sub3 = strng.substring(sz+sz+1, strng.length());
+        }
+        else {
+          // set string 3 to index(2*sz)+1 until index(3*sz)
+          String sub3 = strng.substring(sz+sz+1, sz+sz+sz);
+        }
+        
+        // Get cubed sum of strings
+        int sum1 = 0;
+        for (int i = 0; i < sub1.length(); i++) {
+          sum1 += sub1[i]*sub1[i]*sub1[i];
+        }
+        if (sum1 % 2 == 0) {
+          String reverseSub1 = "";
+          for (int j = sub1.length(); j > 0; j--) {
+            reverseSub1 = reverseSub1 + sub1[j];
+          }
+        else {
+          String tempSub1 = sub1[0];
+          
+        }
+        }
+      }
+    }
+}
